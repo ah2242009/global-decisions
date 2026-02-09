@@ -22,16 +22,6 @@
                 danger: '#f87171',
                 neutral: '#94a3b8'
               }
-            },
-            animation: {
-              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-              'fade-in': 'fadeIn 0.5s ease-out forwards',
-            },
-            keyframes: {
-              fadeIn: {
-                '0%': { opacity: '0', transform: 'translateY(10px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' },
-              }
             }
           },
         },
@@ -42,38 +32,490 @@
         background-color: #0f172a;
         color: #f8fafc;
       }
-      /* Custom scrollbar */
       ::-webkit-scrollbar {
         width: 8px;
       }
       ::-webkit-scrollbar-track {
-        background: #1e293b; 
+        background: #1e293b;
       }
       ::-webkit-scrollbar-thumb {
-        background: #475569; 
+        background: #475569;
         border-radius: 4px;
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: #64748b; 
+        background: #64748b;
+      }
+      textarea::selection {
+        background: rgba(56, 189, 248, 0.35);
       }
     </style>
+  </head>
+  <body class="font-sans">
+    <main class="min-h-screen bg-brand-dark px-4 py-10 text-right">
+      <div class="mx-auto flex w-full max-w-5xl flex-col gap-6">
+        <header class="rounded-3xl border border-white/10 bg-brand-card p-8 shadow-2xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.3em] text-brand-neutral">Global Decisions</p>
+          <h1 class="mt-3 text-3xl font-black text-white md:text-4xl">البرومبت الصحيح والآمن (Flutter + Supabase)</h1>
+          <p class="mt-4 text-lg text-brand-neutral">انسخ البرومبت ده كما هو في Intigravity 👇 وبعد ما يطلع الكود، تحط المفاتيح بنفسك.</p>
+        </header>
 
-<link rel="stylesheet" href="/index.css">
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
-    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6",
-    "recharts": "https://aistudiocdn.com/recharts@^3.5.1"
-  }
-}
-</script>
-  <script type="module" crossorigin src="/assets/index-Ce6-qrNK.js"></script>
-</head>
-  <body>
-    <div id="root"></div>
-</body>
+        <section class="rounded-3xl border border-white/10 bg-brand-card p-8 shadow-2xl">
+          <div class="flex flex-col gap-4">
+            <div class="inline-flex w-fit items-center gap-2 rounded-full bg-brand-accent/10 px-4 py-2 text-sm font-semibold text-brand-accent">
+              🔥 PROMPT – إنشاء تطبيق بيع وشراء عام (Flutter + Supabase)
+            </div>
+            <p class="text-lg leading-relaxed text-slate-100">
+              أنشئ تطبيق Marketplace للبيع والشراء العام يعمل على Android و iOS باستخدام Flutter، ومربوط بـ Supabase Backend.
+            </p>
+          </div>
+        </section>
+
+        <section class="rounded-3xl border border-white/10 bg-brand-card p-8 shadow-2xl">
+          <div class="flex flex-col gap-4">
+            <div class="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
+              <h2 class="text-2xl font-bold text-white">📄 البرومبت الكامل</h2>
+              <button
+                id="copyButton"
+                class="inline-flex items-center gap-2 rounded-full bg-brand-accent px-5 py-2 text-sm font-semibold text-brand-dark shadow-lg transition hover:bg-brand-accent/90"
+                type="button"
+              >
+                نسخ البرومبت
+              </button>
+            </div>
+            <p class="text-brand-neutral">انسخ النص بالكامل والصقه مباشرة في Intigravity.</p>
+            <textarea
+              id="promptText"
+              class="h-80 w-full rounded-2xl border border-white/10 bg-slate-900/70 p-5 text-sm leading-relaxed text-slate-100 focus:border-brand-accent focus:outline-none"
+            >✅ البرومبت الصحيح والآمن (Flutter + Supabase)
+
+انسخ البرومبت ده كما هو في Intigravity 👇
+وبعد ما يطلع الكود، تحط المفاتيح بنفسك.
+
+🔥 PROMPT – إنشاء تطبيق بيع وشراء عام (Flutter + Supabase)
+
+أنشئ تطبيق Marketplace للبيع والشراء العام يعمل على Android و iOS باستخدام Flutter، ومربوط بـ Supabase Backend.
+
+🧱 Stack المطلوب
+
+Flutter (Clean Architecture + MVVM)
+
+Supabase:
+
+Auth (Phone OTP + Email)
+
+PostgreSQL Database
+
+Storage (Images)
+
+Realtime (Chat)
+
+Google AdMob
+
+In-App Paid Promotion System
+
+🔐 Supabase Configuration (IMPORTANT)
+
+استخدم متغيرات بيئة فقط، بدون مفاتيح صريحة داخل الكود:
+
+await Supabase.initialize(
+  url: const String.fromEnvironment('SUPABASE_URL'),
+  anonKey: const String.fromEnvironment('SUPABASE_ANON_KEY'),
+);
+
+❌ لا تضع المفاتيح مباشرة في الكود
+✅ اعتمد على .env أو --dart-define
+
+👤 Authentication
+
+Phone Number + OTP
+
+Email & Password
+
+Google Sign-in (اختياري)
+
+Roles:
+
+user
+
+seller
+
+admin
+
+🗂️ Database Schema (Supabase)
+
+users
+
+id (uuid)
+
+name
+
+phone
+
+role
+
+rating
+
+created_at
+
+categories
+
+id
+
+name
+
+icon
+
+listings
+
+id
+
+title
+
+description
+
+price
+
+category_id
+
+user_id
+
+city
+
+is_promoted
+
+promoted_until
+
+views
+
+created_at
+
+promotions
+
+id
+
+listing_id
+
+type
+
+start_date
+
+end_date
+
+price
+
+chats
+
+id
+
+listing_id
+
+buyer_id
+
+seller_id
+
+messages
+
+id
+
+chat_id
+
+sender_id
+
+message
+
+created_at
+
+🛡️ Security (RLS Required)
+
+المستخدم يرى كل الإعلانات
+
+لا يعدل أو يحذف إلا إعلاناته
+
+الشات خاص بالأطراف فقط
+
+Admin فقط يراجع ويحذف
+
+استخدم:
+
+auth.uid() = user_id
+
+🧾 Listings Flow
+
+إضافة إعلان
+
+رفع صور (Supabase Storage)
+
+تحديد القسم والمدينة
+
+نشر الإعلان
+
+مشاهدة / بحث / فلترة
+
+⭐ Paid Promotion System (Core Monetization)
+
+أنواع الترويج:
+
+Featured Ad
+
+Pinned Ad
+
+Renew Listing
+
+Location Boost
+
+منطق الترتيب:
+
+مروّج
+
+مثبت
+
+أحدث
+
+تقييم البائع
+
+الموقع الجغرافي
+
+💬 Chat System
+
+Supabase Realtime
+
+Chat per listing
+
+Notifications
+
+💰 Google AdMob
+
+Banner Ads (Home)
+
+Native Ads (Listings)
+
+Interstitial (Exit only)
+
+🧠 Admin Panel
+
+Review listings
+
+Ban users
+
+Verify sellers
+
+Manage promotions
+
+Revenue dashboard
+
+🎨 UI/UX
+
+Minimal Design
+
+Arabic / English
+
+Dark & Light Mode
+
+Fast Listing Creation
+
+📦 Output Required
+
+Flutter App Code
+
+Supabase SQL Schema
+
+RLS Policies
+
+Clean Folder Structure
+
+Ready for Production</textarea>
+            <p id="copyStatus" class="text-sm text-brand-neutral"></p>
+          </div>
+        </section>
+
+        <section class="grid gap-6 md:grid-cols-2">
+          <div class="rounded-3xl border border-white/10 bg-brand-card p-6 shadow-xl">
+            <h2 class="text-xl font-bold text-white">🧱 Stack المطلوب</h2>
+            <ul class="mt-4 list-disc space-y-2 pr-5 text-brand-neutral">
+              <li>Flutter (Clean Architecture + MVVM)</li>
+              <li>Supabase: Auth (Phone OTP + Email)</li>
+              <li>PostgreSQL Database</li>
+              <li>Storage (Images)</li>
+              <li>Realtime (Chat)</li>
+              <li>Google AdMob</li>
+              <li>In-App Paid Promotion System</li>
+            </ul>
+          </div>
+          <div class="rounded-3xl border border-white/10 bg-brand-card p-6 shadow-xl">
+            <h2 class="text-xl font-bold text-white">🔐 Supabase Configuration (IMPORTANT)</h2>
+            <p class="mt-3 text-brand-neutral">استخدم متغيرات بيئة فقط، بدون مفاتيح صريحة داخل الكود:</p>
+            <pre class="mt-4 overflow-auto rounded-2xl bg-slate-900/70 p-4 text-left text-sm text-slate-200"><code>await Supabase.initialize(
+  url: const String.fromEnvironment('SUPABASE_URL'),
+  anonKey: const String.fromEnvironment('SUPABASE_ANON_KEY'),
+);</code></pre>
+            <p class="mt-4 text-brand-neutral">❌ لا تضع المفاتيح مباشرة في الكود</p>
+            <p class="text-brand-neutral">✅ اعتمد على .env أو --dart-define</p>
+          </div>
+        </section>
+
+        <section class="grid gap-6 md:grid-cols-2">
+          <div class="rounded-3xl border border-white/10 bg-brand-card p-6 shadow-xl">
+            <h2 class="text-xl font-bold text-white">👤 Authentication</h2>
+            <ul class="mt-4 list-disc space-y-2 pr-5 text-brand-neutral">
+              <li>Phone Number + OTP</li>
+              <li>Email &amp; Password</li>
+              <li>Google Sign-in (اختياري)</li>
+            </ul>
+            <h3 class="mt-6 text-lg font-semibold text-white">Roles:</h3>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-full bg-brand-accent/10 px-3 py-1 text-sm text-brand-accent">user</span>
+              <span class="rounded-full bg-brand-accent/10 px-3 py-1 text-sm text-brand-accent">seller</span>
+              <span class="rounded-full bg-brand-accent/10 px-3 py-1 text-sm text-brand-accent">admin</span>
+            </div>
+          </div>
+          <div class="rounded-3xl border border-white/10 bg-brand-card p-6 shadow-xl">
+            <h2 class="text-xl font-bold text-white">🗂️ Database Schema (Supabase)</h2>
+            <div class="mt-4 space-y-4 text-brand-neutral">
+              <div>
+                <p class="font-semibold text-slate-100">users</p>
+                <p>id (uuid), name, phone, role, rating, created_at</p>
+              </div>
+              <div>
+                <p class="font-semibold text-slate-100">categories</p>
+                <p>id, name, icon</p>
+              </div>
+              <div>
+                <p class="font-semibold text-slate-100">listings</p>
+                <p>id, title, description, price, category_id, user_id, city, is_promoted, promoted_until, views, created_at</p>
+              </div>
+              <div>
+                <p class="font-semibold text-slate-100">promotions</p>
+                <p>id, listing_id, type, start_date, end_date, price</p>
+              </div>
+              <div>
+                <p class="font-semibold text-slate-100">chats</p>
+                <p>id, listing_id, buyer_id, seller_id</p>
+              </div>
+              <div>
+                <p class="font-semibold text-slate-100">messages</p>
+                <p>id, chat_id, sender_id, message, created_at</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="grid gap-6 md:grid-cols-2">
+          <div class="rounded-3xl border border-white/10 bg-brand-card p-6 shadow-xl">
+            <h2 class="text-xl font-bold text-white">🛡️ Security (RLS Required)</h2>
+            <ul class="mt-4 list-disc space-y-2 pr-5 text-brand-neutral">
+              <li>المستخدم يرى كل الإعلانات</li>
+              <li>لا يعدل أو يحذف إلا إعلاناته</li>
+              <li>الشات خاص بالأطراف فقط</li>
+              <li>Admin فقط يراجع ويحذف</li>
+            </ul>
+            <div class="mt-4 rounded-2xl bg-slate-900/70 p-4 text-sm text-slate-200">auth.uid() = user_id</div>
+          </div>
+          <div class="rounded-3xl border border-white/10 bg-brand-card p-6 shadow-xl">
+            <h2 class="text-xl font-bold text-white">🧾 Listings Flow</h2>
+            <ol class="mt-4 list-decimal space-y-2 pr-5 text-brand-neutral">
+              <li>إضافة إعلان</li>
+              <li>رفع صور (Supabase Storage)</li>
+              <li>تحديد القسم والمدينة</li>
+              <li>نشر الإعلان</li>
+              <li>مشاهدة / بحث / فلترة</li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="rounded-3xl border border-white/10 bg-brand-card p-8 shadow-2xl">
+          <h2 class="text-2xl font-bold text-white">⭐ Paid Promotion System (Core Monetization)</h2>
+          <div class="mt-4 grid gap-6 md:grid-cols-2">
+            <div>
+              <h3 class="text-lg font-semibold text-white">أنواع الترويج:</h3>
+              <ul class="mt-3 list-disc space-y-2 pr-5 text-brand-neutral">
+                <li>Featured Ad</li>
+                <li>Pinned Ad</li>
+                <li>Renew Listing</li>
+                <li>Location Boost</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-white">منطق الترتيب:</h3>
+              <ul class="mt-3 list-disc space-y-2 pr-5 text-brand-neutral">
+                <li>مروّج</li>
+                <li>مثبت</li>
+                <li>أحدث</li>
+                <li>تقييم البائع</li>
+                <li>الموقع الجغرافي</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="grid gap-6 md:grid-cols-2">
+          <div class="rounded-3xl border border-white/10 bg-brand-card p-6 shadow-xl">
+            <h2 class="text-xl font-bold text-white">💬 Chat System</h2>
+            <ul class="mt-4 list-disc space-y-2 pr-5 text-brand-neutral">
+              <li>Supabase Realtime</li>
+              <li>Chat per listing</li>
+              <li>Notifications</li>
+            </ul>
+          </div>
+          <div class="rounded-3xl border border-white/10 bg-brand-card p-6 shadow-xl">
+            <h2 class="text-xl font-bold text-white">💰 Google AdMob</h2>
+            <ul class="mt-4 list-disc space-y-2 pr-5 text-brand-neutral">
+              <li>Banner Ads (Home)</li>
+              <li>Native Ads (Listings)</li>
+              <li>Interstitial (Exit only)</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="grid gap-6 md:grid-cols-2">
+          <div class="rounded-3xl border border-white/10 bg-brand-card p-6 shadow-xl">
+            <h2 class="text-xl font-bold text-white">🧠 Admin Panel</h2>
+            <ul class="mt-4 list-disc space-y-2 pr-5 text-brand-neutral">
+              <li>Review listings</li>
+              <li>Ban users</li>
+              <li>Verify sellers</li>
+              <li>Manage promotions</li>
+              <li>Revenue dashboard</li>
+            </ul>
+          </div>
+          <div class="rounded-3xl border border-white/10 bg-brand-card p-6 shadow-xl">
+            <h2 class="text-xl font-bold text-white">🎨 UI/UX</h2>
+            <ul class="mt-4 list-disc space-y-2 pr-5 text-brand-neutral">
+              <li>Minimal Design</li>
+              <li>Arabic / English</li>
+              <li>Dark &amp; Light Mode</li>
+              <li>Fast Listing Creation</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="rounded-3xl border border-white/10 bg-brand-card p-6 shadow-xl">
+          <h2 class="text-xl font-bold text-white">📦 Output Required</h2>
+          <ul class="mt-4 list-disc space-y-2 pr-5 text-brand-neutral">
+            <li>Flutter App Code</li>
+            <li>Supabase SQL Schema</li>
+            <li>RLS Policies</li>
+            <li>Clean Folder Structure</li>
+            <li>Ready for Production</li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <script>
+      const copyButton = document.getElementById('copyButton');
+      const promptText = document.getElementById('promptText');
+      const copyStatus = document.getElementById('copyStatus');
+
+      copyButton.addEventListener('click', async () => {
+        try {
+          promptText.select();
+          promptText.setSelectionRange(0, promptText.value.length);
+          await navigator.clipboard.writeText(promptText.value);
+          copyStatus.textContent = '✅ تم نسخ البرومبت بالكامل.';
+        } catch (error) {
+          copyStatus.textContent = '⚠️ لم يتم النسخ تلقائيًا. انسخ يدويًا من مربع النص.';
+        }
+      });
+    </script>
+  </body>
 </html>
